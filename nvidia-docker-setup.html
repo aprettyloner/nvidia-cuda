@@ -34,4 +34,9 @@ https://blog.dask.org/2019/01/13/dask-cudf-first-steps
 ###rapids/cudf install
 https://github.com/rapidsai/cudf/blob/branch-0.13/CONTRIBUTING.md#setting-up-your-build-environment
 
+
+### THIS ONE WORKS
+docker build -t demo .
+docker run --rm -it --runtime=nvidia --user $(id -u):$(id -g) --group-add container_user --group-add sudo -v "${PWD}:/gpu-services" -p 8888:8888 -p 8000:80 demo
+
 </pre>
